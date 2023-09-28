@@ -375,24 +375,11 @@ Todo Added Successfully!!
 Fetching All Todo Items from the API.
 
 ```python
-curl --location --request GET 'http://64.227.136.208:8080/api/v1/todos'
+curl --location --request GET 'http://localhost:8080/api/v1/todos'
 ```
 
 **Expected Output:**
 
 ```python
-{
-    "todos": [
-        {
-            "_id": {
-                "$oid": "6514fb50f82cdde1bd0dfe11"
-            },
-            "Id": "1",
-            "emailId": "email@gmail.com",
-            "lastName": "lastName",
-            "firstName": "firstName",
-            "location": "location"
-        }
-    ]
-}
+{"todos":[{"location":"location","lastName":"lastName","emailId":"email@gmail.com","firstName":"firstName","Id":"1","_id":{"$oid":"6514fb50f82cdde1bd0dfe11"}}]}
 ```

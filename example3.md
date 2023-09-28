@@ -345,3 +345,54 @@ make
 ```python
 ./restapicpp &
 ```
+
+**Once executed, it will start a web server on a specified port 8080**
+
+**POST Request:**
+
+Posting a New Todo Item to the API
+
+```python
+curl --location --request POST 'http://localhost:8080/api/v1/todos' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "Id": "1",
+    "firstName": "firstName",
+    "lastName": "lastName",
+    "emailId": "email@gmail.com",
+    "location": "location"
+}
+```
+
+**Expected Output:**
+
+```python
+Todo Added Successfully!!
+```
+
+**GET Request:**
+
+Fetching All Todo Items from the API.
+
+```python
+curl --location --request GET 'http://64.227.136.208:8080/api/v1/todos'
+```
+
+**Expected Output:**
+
+```python
+{
+    "todos": [
+        {
+            "_id": {
+                "$oid": "6514fb50f82cdde1bd0dfe11"
+            },
+            "Id": "1",
+            "emailId": "email@gmail.com",
+            "lastName": "lastName",
+            "firstName": "firstName",
+            "location": "location"
+        }
+    ]
+}
+```

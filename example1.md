@@ -145,3 +145,17 @@ make
 ```python
 ./simplecpp &
 ```
+
+**Once executed, it will start a web server on a specified port 8080**
+
+17. curl http://localhost:8080
+
+```python
+curl http://localhost:8080
+```
+
+**Excpected Output**
+
+```python
+HelloWorld
+```

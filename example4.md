@@ -185,3 +185,17 @@ make
 ```python
 ./clientcpp &
 ```
+
+**Once executed, it will start a web server on a specified port 8081 & run simplecpp application for testing purpose**
+
+17. curl http://localhost:8081/send_request
+
+```python
+curl http://localhost:8080/send_request
+```
+
+**Excpected Output**
+
+```python
+HelloWorld
+```

@@ -499,3 +499,48 @@ curl --location --request GET 'http://localhost:8080/api/v1/todos'
 ```python
 {"todos":[{"location":"location","lastName":"lastName","emailId":"email@gmail.com","firstName":"firstName","Id":"1","_id":{"$oid":"6514fb50f82cdde1bd0dfe11"}}]}
 ```
+
+**PUT Request**
+
+```python
+curl --location --request PUT 'http://localhost:8080/api/v1/todos' \
+--header 'Content-Type: application/json' \
+--data '{
+    "Id": "1",
+    "location": "Chennai"
+}'
+```
+
+**Expected Output:**
+
+```python
+Todo Updated Successfully!!
+```
+
+**DELETE Request**
+
+```python
+curl --location --request DELETE 'http://localhost:8080/api/v1/todos' \
+--header 'Content-Type: application/json' \
+--data '{
+    "Id":"1"
+}'
+```
+
+**Expected Output:**
+
+```python
+Todo Deleted Successfully!!
+```
+
+**GET BY ID Request**
+
+```python
+curl --location 'http://localhost:8080/api/v1/todos/1'
+```
+
+**Expected Output:**
+
+```python
+{"todo":{"location":"Chennai","lastName":"lastName","emailId":"email@gmail.com","firstName":"firstName","Id":"1","_id":{"$oid":"6515254668b0190b790b0fd1"}}}
+```

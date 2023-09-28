@@ -315,6 +315,17 @@ using namespace crow::mustache;
 using bsoncxx::builder::basic::kvp;
 using bsoncxx::builder::basic::make_document;
 
+// Create a todo from the given key-value pairs.
+bsoncxx::document::value createTodo(const vector<pair<string, string>>& keyValues)
+{
+    bsoncxx::builder::stream::document document{};
+    for (auto& keyValue : keyValues)
+    {
+        document << keyValue.first << keyValue.second;
+    }
+    return document << bsoncxx::builder::stream::finalize;
+}
+
 // Add the todo to the given collection.
 void insertTodo(mongocxx::collection& collection, const bsoncxx::document::value& document)
 {
